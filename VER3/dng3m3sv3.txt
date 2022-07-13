@@ -1,0 +1,94 @@
+switch (d_type)
+        {
+        case 1: 
+        {
+        if (d_anod > 4) d_anod=1;
+        if (d_anod == 1)
+            {
+            ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+            ledddv = 1;
+            leddch = 0;
+            leddtr = 0;
+            seg_display(donvi);            
+            }
+        if (d_anod == 2)
+            {
+            ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+            ledddv = 0;
+            leddch = 1;
+            leddtr = 0;
+            seg_display(chuc);    
+            }
+        if (d_anod == 3)
+            {
+            ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+            ledddv = 0;
+            leddch = 0;
+            leddtr = 1;
+            seg_display(tram);    
+            }
+        if ((d_anod == 4))
+            {
+            ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+            ledddv = 0;
+            leddch = 0;
+            leddtr = 0;
+            seg_display(10);                                        
+            }       
+        break;
+        }
+        case 2: 
+        {
+        if (d_anod > 4) d_anod=1;
+        if (d_anod == 1)
+            {
+            ledvdv=0; ledddv = 0; leddch = 0; leddtr = 0;
+            ledxdv=1; 
+            ledxch=0;
+            ledxtr=0;
+            seg_display(donvi);            
+            }
+        if (d_anod == 2)
+            {
+            ledvdv=0; ledddv = 0; leddch = 0; leddtr = 0;
+            ledxdv=0; 
+            ledxch=1;
+            ledxtr=0;
+            seg_display(chuc);    
+            }
+        if (d_anod == 3)
+            { 
+            ledvdv=0; ledddv = 0; leddch = 0; leddtr = 0;
+            ledxdv=0; 
+            ledxch=0;
+            ledxtr=1;
+            seg_display(tram);
+            }
+        if (d_anod == 4)
+            { 
+            ledvdv=0; ledddv = 0; leddch = 0; leddtr = 0;
+            ledxdv=0; 
+            ledxch=0;
+            ledxtr=0;
+            seg_display(10);
+            }       
+        break;
+        }
+        case 3:
+        {
+        if (d_anod > 4) d_anod=1;
+        if (d_anod == 1)
+            {
+            ledddv = 0; leddch = 0; leddtr = 0; ledxdv=0; ledxch=0; ledxtr=0;
+            ledvdv=1;
+            seg_display(donvi);            
+            }
+        if ((d_anod > 1)&&(d_anod <= 4))
+            {
+            ledddv=0; leddch=0; leddtr=0; ledxdv=0; ledxch=0; ledxtr=0;
+            ledvdv=0;
+            seg_display(10);
+            }
+        break;
+        }
+        }

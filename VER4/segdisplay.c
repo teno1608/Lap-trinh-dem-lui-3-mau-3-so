@@ -1,0 +1,143 @@
+
+
+// Define seg a >>> g PORTD
+
+int seg_array[11]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x00};
+
+void seg_display(char var7seg)
+    {
+    switch (var7seg)
+        {
+        case 0: PORTD=seg_array[0];
+                break;
+        case 1: PORTD=seg_array[1];
+                break;
+        case 2: PORTD=seg_array[2];
+                break;
+        case 3: PORTD=seg_array[3];
+                break;
+        case 4: PORTD=seg_array[4];
+                break;
+        case 5: PORTD=seg_array[5];
+                break;
+        case 6: PORTD=seg_array[6];
+                break;
+        case 7: PORTD=seg_array[7];
+                break;
+        case 8: PORTD=seg_array[8];
+                break;
+        case 9: PORTD=seg_array[9];
+                break;
+        case 10: PORTD=seg_array[10];
+                break; 
+        }        
+	}                  
+
+void dislay7seg()
+    { 
+    if (d_anod ==4 ) d_anod=0;    
+    switch (d_type){
+    
+        case 1: 
+            {
+            switch (d_anod){ 
+                case 0: 
+                ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+                leddch = 0;
+                leddtr = 0;
+                seg_display(donvi);
+                ledddv = 1;
+                break;
+        
+                case 1:  
+                ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+                ledddv = 0;
+                leddtr = 0;
+                seg_display(chuc);
+                leddch = 1;
+                break;
+            
+                case 2:
+                ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+                ledddv = 0;
+                leddch = 0;
+                seg_display(tram); 
+                leddtr = 1;
+                break;
+                
+                case 3:
+                seg_display(10);
+                ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+                ledddv = 0;
+                leddch = 0;
+                leddtr = 0;
+                break;
+                }        
+            break;
+            }
+        case 2: 
+            {
+            switch (d_anod){ 
+                case 0: 
+                ledvdv=0; ledddv = 0; leddch = 0; leddtr = 0;
+                ledxch=0;
+                ledxtr=0;
+                seg_display(donvi);
+                ledxdv=1; 
+                break;       
+            
+                case 1: 
+                ledvdv=0; ledddv = 0; leddch = 0; leddtr = 0;
+                ledxdv=0; 
+                ledxtr=0; 
+                seg_display(chuc);
+                ledxch=1;
+                break;
+
+                case 2:
+                ledvdv=0; ledddv = 0; leddch = 0; leddtr = 0;
+                ledxdv=0; 
+                ledxch=0;
+                seg_display(tram);
+                ledxtr=1;
+                break; 
+                
+                case 3:
+                seg_display(10); 
+                ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+                ledddv = 0;
+                leddch = 0;
+                leddtr = 0;
+                break;
+                } 
+            break;
+            }
+        case 3:
+            {
+            switch (d_anod){
+                case 0: 
+                ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+                leddch = 0;
+                leddtr = 0;
+                seg_display(donvi);
+                ledddv = 1;
+                break;
+                       
+                case 1: 
+                seg_display(10); 
+                ledvdv=0; ledxdv=0; ledxch=0; ledxtr=0;
+                ledddv = 0;
+                leddch = 0;
+                leddtr = 0;
+                break; 
+                
+                case 2:
+                break;
+                
+                case 3:
+                break;
+                }
+            break;
+            }
+        }       
+    }

@@ -1,0 +1,4 @@
+VERSION:3 SOURCE_TIMESTAMP:478A50F6
+NODE:V LEVEL:0 LINE:5 "seg_array -> RAM:????"
+NODE:F LEVEL:0 LINE:7 "seg_display(unsigned char var7seg)"
+NODE:F LEVEL:0 LINE:36 "dislay7seg(void)"

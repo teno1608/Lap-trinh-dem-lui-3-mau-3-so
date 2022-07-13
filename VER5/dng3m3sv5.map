@@ -1,0 +1,37 @@
+RAM Allocation
+Variable                                                          Address   Size
+--------------------------------------------------------------------------------
+d_type                                                            0x0160       2
+donvi                                                             0x0162       2
+chuc                                                              0x0164       2
+tram                                                              0x0166       2
+d_anod                                                            0x0168       2
+cou_dr                                                            0x016A       2
+cou_dg                                                            0x016C       2
+cou_dy                                                            0x016E       2
+i                                                                 0x0170       2
+cou_r                                                             0x0172       2
+cou_g                                                             0x0174       2
+cou_y                                                             0x0176       2
+cou_1s                                                            0x0178       2
+f_yell                                                            0x017A       2
+cou_lm                                                            0x017C       2
+cou_r_pre                                                         0x017E       2
+cou_g_pre                                                         0x0180       2
+cou_y_pre                                                         0x0182       2
+f_red                                                             0x0184       2
+f_gree                                                            0x0186       2
+kds_cv                                                            0x0188       2
+seg_array                                                         0x018A      22
+
+EEPROM Allocation
+Variable                                                          Address   Size
+--------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                          Register  Size
+--------------------------------------------------------------------------------
+f_cv                                                              R2.0      1bit
+gree                                                              R2.1      1bit
+yell                                                              R2.2      1bit
+red                                                               R2.3      1bit
